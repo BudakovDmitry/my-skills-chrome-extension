@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "My skills",
+  "description": "My skills chrome extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "48": "./icon-48.png",
+    "100": "./icon-100.png"
+  },
+  "permissions": ["activeTab"]
+}
