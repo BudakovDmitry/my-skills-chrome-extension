@@ -11,6 +11,18 @@ export default defineConfig({
       "@": path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        content: path.resolve(__dirname, 'src/app/content.ts'),
+        background: path.resolve(__dirname, 'src/app/background.ts')
+      },
+      output: {
+        entryFileNames: '[name].js'
+      }
+    },
+  },
   plugins: [
     react(),
     crx({ manifest })

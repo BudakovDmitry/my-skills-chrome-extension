@@ -12,5 +12,17 @@
     "48": "public/icon-48.png",
     "100": "public/icon-100.png"
   },
-  "permissions": ["activeTab"]
+  "permissions": ["cookies", "storage", "activeTab", "scripting", "tabs"],
+  "host_permissions": [
+    "http://localhost:3000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:3000/*"],
+      "js": ["src/app/content.ts"]
+    }
+  ],
+  "background": {
+    "service_worker": "src/app/background.ts"
+  }
 }

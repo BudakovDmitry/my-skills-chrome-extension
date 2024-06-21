@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import './main.css'
-import Home from '../pages/Home/Home'
+import Home from '@/pages/Home/Home'
 import NotWorking from '@/pages/NotWorking/NotWorking';
 
 chrome.tabs.query({
